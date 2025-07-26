@@ -1,0 +1,25 @@
+.filter {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  padding: 3px;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+
+  select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 14px;
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+    option {
+      color: black;
+    }
+  }
+}

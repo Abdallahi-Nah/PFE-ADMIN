@@ -1,0 +1,57 @@
+.home {
+  display: flex;
+  .homeContainer {
+    flex: 6;
+    background-color: #ffffff;
+    color: #000000;
+
+    .widgets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: space-between;
+
+      .widget {
+        flex: 1 1 calc(33.33% - 13.33px); // 3 colonnes sur écran large
+        max-width: calc(33.33% - 13.33px);
+
+        @media (max-width: 768px) {
+          flex: 1 1 100%;
+          max-width: 300px; // limite la largeur max en mobile
+          margin: 0 auto; // centre le widget
+        }
+      }
+    }
+
+    .charts {
+      display: flex;
+      gap: 5px;
+      padding: 5px 20px;
+
+      // Responsive pour Chart et Featured
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px 20px 20px;
+
+        .chart,
+        .featured {
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        gap: 15px;
+        padding: 0 15px 15px 15px;
+
+        .charts,
+        .featured {
+          max-width: 280px;
+        }
+      }
+    }
+  }
+}

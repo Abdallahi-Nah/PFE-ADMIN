@@ -1,0 +1,49 @@
+.cellAction {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    line-height: normal;
+  }
+
+  .viewButton,
+  .updateButton,
+  .deleteButton {
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .viewButton {
+    color: darkblue;
+    border: 1px dotted rgba(0, 0, 139, 0.6);
+
+    &:hover {
+      background-color: rgba(0, 0, 139, 0.1);
+    }
+  }
+
+  .updateButton {
+    color: green;
+    border: 1px dotted rgba(0, 128, 0, 0.6);
+
+    &:hover {
+      background-color: rgba(0, 128, 0, 0.1);
+    }
+  }
+
+  .deleteButton {
+    color: crimson;
+    border: 1px dotted rgba(220, 20, 60, 0.6);
+
+    &:hover {
+      background-color: rgba(220, 20, 60, 0.1);
+    }
+  }
+}

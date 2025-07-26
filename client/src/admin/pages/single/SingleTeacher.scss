@@ -1,0 +1,116 @@
+.new {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .newContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+
+    .top {
+      box-shadow: 2px 4px 10px rgba(201, 201, 201, 0.47);
+      background-color: #ffffff;
+      border-radius: 5px;
+      margin: 20px;
+      padding: 10px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 300;
+        color: #616161;
+      }
+    }
+
+    .bottom {
+      box-shadow: 2px 4px 10px rgba(201, 201, 201, 0.47);
+      background-color: #ffffff;
+      border-radius: 5px;
+      margin: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .imageContainer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .image {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .formContainer {
+        width: 100%;
+
+        form {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr); // default mobile
+          gap: 20px;
+
+          .formInput {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              margin-bottom: 5px;
+              font-size: 14px;
+              color: #555;
+            }
+
+            input {
+              padding: 8px;
+              font-size: 16px;
+              border: none;
+              border-bottom: 1px solid gray;
+              outline: none;
+              background: transparent;
+
+              &::placeholder {
+                font-size: 14px;
+              }
+            }
+          }
+
+          button {
+            width: 150px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #0a9048;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            justify-self: center;
+
+            &:hover {
+              background-color: white;
+              color: #0a9048;
+              border: 1px solid #0a9048;
+            }
+          }
+        }
+
+        // Responsive layout
+        @media (min-width: 600px) {
+          form {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 900px) {
+          form {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
