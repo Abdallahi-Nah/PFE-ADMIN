@@ -4,7 +4,7 @@ import axios from "axios";
 export const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
-  const backendUrl = "http://localhost:4000";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const [departments, setDepartments] = useState([]);
   const [specialities, setSpecialities] = useState([]);
